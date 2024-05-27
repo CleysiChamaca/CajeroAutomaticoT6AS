@@ -21,32 +21,32 @@ CajeroAutomatico depende de la abstracción CuentaBancaria y OperacionesCajero, 
 Main depende de la abstracción CuentaFactory para crear cuentas, lo cual es una buena práctica. 
 -----------------------------------------------------------------------------------------------------------------------------------------
 Patrones de Diseño Aplicados
-Creational: Abstract Factory (para la implementación de CuentaFactory y CuentaDeAhorrosFactory).El patrón Abstract Factory se utiliza para crear familias de objetos relacionados sin especificar sus clases concretas. En el código, se usa para la creación de cuentas bancarias.
-Estructural:Decorator (para la implementación de OperacionDecorator, ConfirmacionDecorator, y ResumenDecorator).El patrón Decorator se utiliza para añadir comportamiento a objetos de manera dinámica sin alterar su estructura. Aquí, se utiliza para añadir funcionalidad adicional a las operaciones del cajero automático, como imprimir confirmaciones y resúmenes.
-Comportamiento: Observer (para la implementación de Observer y ObservadorSaldo).El patrón Observer permite que un objeto (sujeto) notifique a otros objetos (observadores) sobre cambios en su estado. Aquí, se utiliza para actualizar a los observadores cuando cambia el saldo de una cuenta bancaria.
+1.-Creational: Abstract Factory (para la implementación de CuentaFactory y CuentaDeAhorrosFactory).El patrón Abstract Factory se utiliza para crear familias de objetos relacionados sin especificar sus clases concretas. En el código, se usa para la creación de cuentas bancarias.
+2.-Estructural:Decorator (para la implementación de OperacionDecorator, ConfirmacionDecorator, y ResumenDecorator).El patrón Decorator se utiliza para añadir comportamiento a objetos de manera dinámica sin alterar su estructura. Aquí, se utiliza para añadir funcionalidad adicional a las operaciones del cajero automático, como imprimir confirmaciones y resúmenes.
+3.-Comportamiento: Observer (para la implementación de Observer y ObservadorSaldo).El patrón Observer permite que un objeto (sujeto) notifique a otros objetos (observadores) sobre cambios en su estado. Aquí, se utiliza para actualizar a los observadores cuando cambia el saldo de una cuenta bancaria.
 ----------------------------------------------------------------------------------------------------------------------------------------
 Arquitectura de 3 capas
 La Arquitectura seguida es el modelo de 3 capas que son las siguientes:
 Datos, Logica del Negocio y Presentacion.
-En la capa de Datos estan las siguientes clases:
-Cuentabancaria
-CuentaBase
-CuentaDe Ahorros
+1.-En la capa de Datos estan las siguientes clases:
+  -Cuentabancaria
+  -CuentaBase
+  -CuentaDe Ahorros
 
-En la Logica de Negocio estan las siguientes clases:
-ConfirmacionDecorator
-ConsultaSaldo
-CuentaDeAhorrosFactory
-CuentaFactory
-Deposito
-Observer
-OperacionBase
-OperacionDecorator
-OperacionCajero
-ResumenDecorator
-Retiro
+2.-En la Logica de Negocio estan las siguientes clases:
+  -ConfirmacionDecorator
+  -ConsultaSaldo
+  -CuentaDeAhorrosFactory
+  -CuentaFactory
+  -Deposito
+  -Observer
+  -OperacionBase
+  -OperacionDecorator
+  -OperacionCajero
+  -ResumenDecorator
+  -Retiro
 
-En la capa de Presentacion estan las siguientes clases:
-CajeroAutomatico
-Main
-ObservadorSaldo
+3.-En la capa de Presentacion estan las siguientes clases:
+  -CajeroAutomatico
+  -Main
+  -ObservadorSaldo
